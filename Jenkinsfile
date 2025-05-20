@@ -21,25 +21,19 @@ pipeline {
 
         stage("Linting") {
             steps {
-                script {
-                    echo "This is my Linting Step"
-                }
+                echo "This is my Linting Step"
             }
         }
 
         stage("Install Packages") {
             steps {
-                script {
-                    echo "This is Install Packages Step"
-                }
+                echo "This is Install Packages Step"
             }
         }
 
         stage("Run Application") {
             steps {
-                script {
-                    echo "This is my Run Application Step"
-                }
+                echo "This is my Run Application Step"
             }
         }
 
@@ -56,7 +50,7 @@ pipeline {
 
         stage("Push Docker Image to Docker Hub") {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'anilkumar432', passwordVariable: '3.MycAZMyCq4vHp')]) {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     script {
                         echo "Logging in and pushing Docker image..."
                         sh '''
