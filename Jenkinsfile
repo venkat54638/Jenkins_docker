@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        VENV = 'venv'
+    }
+
     stages {
         stage ("Install") {
             steps {
