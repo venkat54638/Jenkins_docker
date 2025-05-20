@@ -3,13 +3,17 @@ version: '3.8'
 services:
   jenkins:
     image: jenkins/jenkins:lts
+    container_name: jenkins-docker
     user: root
+    restart: unless-stopped
     ports:
-      - "8080:8080"
-      - "50000:50000"
+      - "8080:8080"      # Jenkins web interface
+      - "50000:50000"    # For agent communication
     volumes:
-      - jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
+      - jenkins_home:/var/jenkins_home           # Jenkins data
+      - /var/run/docker.sock:/var/run/docker.sock # Docker daemon socket
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
 
 volumes:
   jenkins_home:
