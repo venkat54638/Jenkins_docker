@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         VENV = 'venv'
-        DOCKER_IMAGE = 'your-dockerhub-username/your-image-name'
+        DOCKER_IMAGE = 'anilkumar432/jenkins-assin'
         DOCKER_TAG = 'latest'
     }
 
