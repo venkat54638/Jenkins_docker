@@ -2,11 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage ("First Stage") {
+        stage ("Install") {
             steps {
-                script {
-                    echo "This is my first Step"
-                }
+                sh 'ls'
+                sh 'python -m pip install --upgrade pip'
+                sh 'pip install -r requirements.txt'
+
             }
         }
         stage ("Linting") {
