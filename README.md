@@ -1,5 +1,6 @@
 ![image](https://github.com/user-attachments/assets/c2ad8454-d32d-4c26-ad37-9e46ed9a6bfe)
-![image](https://github.com/user-attachments/assets/9014d6d3-dcdc-4700-a838-1dc2e1779a16)
+![image](https://github.com/user-attachments/assets/0e9d5df8-35b9-4cdf-8d0c-54dc7245b89a)
+
 # Jenkins Docker Integration with Python Project
 
 ### Steps Followed
